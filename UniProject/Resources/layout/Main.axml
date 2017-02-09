@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:theme="@android:style/Theme.NoTitleBar">
+<!--
+              android:style="@style/Theme.Holo.Dialog.NoActionBar">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
+        -->
+<!--app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" -->
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/myDrawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <!--@Main Layout/Content-->
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/login_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp" />
+            <TextView
+                android:text="Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1" />
+            <Button
+                android:text="Main"
+                android:layout_width="250px"
+                android:layout_height="250px"
+                android:id="@+id/m1_f1" />
+        </FrameLayout>
+    <!--Left Drawer
+        <ListView
+            android:id="@+id/LeftDrawer"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:choiceMode="singleChoice"
+            android:divider="#02D202"
+            android:layout_gravity="start"
+            android:dividerHeight="2dp"
+            android:background="#F2F2F2" />-->
+        <ListView
+            android:id="@+id/right_drawer"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:choiceMode="singleChoice"
+            android:divider="#E2E2E2"
+            android:dividerHeight="1dp"
+            android:background="#000000" />
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>

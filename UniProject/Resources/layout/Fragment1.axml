@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+  <android.support.v4.widget.DrawerLayout
+           android:id="@+id/myDrawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/f1_Frame"
+        android:minWidth="25px"
+        android:minHeight="25px">
+      <fragment
+          android:id="@+id/map"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:name="com.google.android.gms.maps.MapFragment" />
+      <Button
+          android:text="Fragment 1"
+          android:layout_width="250px"
+          android:layout_height="250px"
+          android:id="@+id/button1" />
+    </FrameLayout>
+    <ListView
+             android:id="@+id/LeftDrawer"
+             android:layout_width="240dp"
+             android:layout_height="match_parent"
+             android:choiceMode="singleChoice"
+             android:divider="#02D202"
+             android:layout_gravity="start"
+             android:dividerHeight="2dp"
+             android:background="#ff0000"
+           />
+
+  </android.support.v4.widget.DrawerLayout>
+</LinearLayout>
